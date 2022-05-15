@@ -1,0 +1,8 @@
+# curl -X POST client_id1:client_secret1@localhost:9000/oauth2/token -d "grant_type=client_credentials" -d "scope=message:read"
+POST localhost:9000/oauth2/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=client_credentials&scope=read&client_id=client_id1&client_secret=client_secret1
+
+
+
