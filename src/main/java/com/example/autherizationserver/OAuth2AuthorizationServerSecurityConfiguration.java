@@ -47,6 +47,19 @@ public class OAuth2AuthorizationServerSecurityConfiguration {
 	@Order(1)
 	public SecurityFilterChain authorizationServerSecurityFilterChain(HttpSecurity http) throws Exception {
 		OAuth2AuthorizationServerConfiguration.applyDefaultSecurity(http);
+		/*
+		AbstractSettings
+		{
+		settings.provider.authorization-endpoint=/oauth2/authorize,
+		settings.provider.jwk-set-endpoint=/oauth2/jwks,
+		settings.provider.token-endpoint=/oauth2/token,
+		settings.provider.token-revocation-endpoint=/oauth2/revoke,
+		settings.provider.token-introspection-endpoint=/oauth2/introspect,
+		settings.provider.oidc-client-registration-endpoint=/connect/register,
+		settings.provider.issuer=http://localhost:9000,
+		settings.provider.oidc-user-info-endpoint=/userinfo
+		}
+		 */
 		return http.build();
 	}
 
